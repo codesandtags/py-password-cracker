@@ -98,8 +98,15 @@ hashcat --show -m [hash-type] -a [attack-mode] [hash-file] [dictionary-file]
 ```
 
 ```bash
-hashcat --show -m 17225 -a 3 tests/numbers-5.txt dictionary/dictionary.txt
+hashcat --show  --status -m 17225 -a 3 tests/numbers-5-hash.txt dictionary/rockyou.txt
 ```
+
+**Using a mask with only numbers instead of a dictionary**:
+
+```bash
+hashcat --show --status -m 17225 -a 3 tests/numbers-12-hash.txt '?d?d?d?d?d?d?d?d?d?d?d?d'
+```
+
 
 ### Hybrid attack
 
